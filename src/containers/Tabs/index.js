@@ -3,6 +3,7 @@ import Buttons from '../Buttons';
 import Avatars from "../Avatars";
 import {useState} from "react";
 import Checkboxes from "../Checkboxes";
+import Table from "../Table";
 import Chips from "../Chips";
 
 export default function TabsCustom () {
@@ -28,7 +29,8 @@ export default function TabsCustom () {
         <Tab value="Button" label="Buttons" />
         <Tab value="Avatar" label="Avatars" />
         <Tab value="Checkbox" label="Checkboxes" />
-        <Tab value="Chip" label="CHips" />
+        <Tab value="Chip" label="Chips" />
+        <Tab value="Table" label="Table" />
       </Tabs>
       <div>
         <TabPanel id="Button">
@@ -42,6 +44,9 @@ export default function TabsCustom () {
         </TabPanel>
         <TabPanel id="Chip">
           <Chips />
+        </TabPanel>
+        <TabPanel id="Table">
+          <Table />
         </TabPanel>
       </div>
     </div>
