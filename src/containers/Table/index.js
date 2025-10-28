@@ -1,7 +1,13 @@
 import { Table, TableHead, TableRow, TableCell, TableBody, TableContainer, Stack } from "@mui/material";
-import {FavoriteBorder, Favorite} from "@mui/icons-material";
 
 export default function Checkboxes () {
+    const columns = [
+        'Country',
+        'Capital',
+        'Currency',
+        'Continent'
+    ];
+
     const data = [
         {
             country: 'India',
@@ -27,35 +33,21 @@ export default function Checkboxes () {
                         },
                     }}>
                         <TableRow>
-                            <TableCell>
-                                Country
-                            </TableCell>
-                            <TableCell>
-                                Capital
-                            </TableCell>
-                            <TableCell>
-                                Currency
-                            </TableCell>
-                            <TableCell>
-                                Continent
-                            </TableCell>
+                            {columns.map(column => (
+                                <TableCell>
+                                    {column}
+                                </TableCell>
+                            ))}
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {data.map(row => (
                             <TableRow>
-                                <TableCell>
-                                    {row.country}
-                                </TableCell>
-                                <TableCell>
-                                    {row.capital}
-                                </TableCell>
-                                <TableCell>
-                                    {row.currency}
-                                </TableCell>
-                                <TableCell>
-                                    {row.continent}
-                                </TableCell>
+                                {columns.map(column => (
+                                    <TableCell>
+                                        {row[column.toLowerCase()]}
+                                    </TableCell>
+                                ))}
                             </TableRow>
                         ))}
                     </TableBody>
