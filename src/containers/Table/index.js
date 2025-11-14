@@ -1,6 +1,6 @@
 import { Table, TableHead, TableRow, TableCell, TableBody, TableContainer, Stack } from "@mui/material";
 
-export default function Checkboxes () {
+export default function TableComponent () {
     const columns = [
         'Country',
         'Capital',
