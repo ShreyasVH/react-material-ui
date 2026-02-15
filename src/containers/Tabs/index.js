@@ -6,6 +6,7 @@ import Checkboxes from "../Checkboxes";
 import Table from "../Table";
 import Chips from "../Chips";
 import Loader from '../Loader';
+import Card from '../Card';
 
 export default function TabsCustom () {
   const [value, setValue] = useState('Button');
@@ -33,6 +34,7 @@ export default function TabsCustom () {
         <Tab value="Chip" label="Chips" />
         <Tab value="Table" label="Table" />
         <Tab value="Loader" label="Loader" />
+        <Tab value="Card" label="Card" />
       </Tabs>
       <div>
         <TabPanel id="Button">
@@ -52,6 +54,9 @@ export default function TabsCustom () {
         </TabPanel>
         <TabPanel id="Loader">
           <Loader />
+        </TabPanel>
+        <TabPanel id="Card">
+          <Card />
         </TabPanel>
       </div>
     </div>
