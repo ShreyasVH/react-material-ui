@@ -5,6 +5,7 @@ export default function Loader () {
     const [ visible, setVisible ] = useState(false);
     const [ message, setMessage ] = useState('');
     const [ type, setType ] = useState('');
+    const [ key, setKey ] = useState('');
 
     const showSnackbar = (event, data) => {
         event.preventDefault();
@@ -20,7 +21,9 @@ export default function Loader () {
 
     const handleShowSnackbar = (event) => {
         setMessage(event.detail?.message ?? '');
-        setType(event.detail?.type ?? 'success');
+        const newType = event.detail?.type ?? '';
+        setType(newType);
+        setKey(newType + (new Date().getTime()));
         setVisible(true);
     };
 
@@ -29,6 +32,8 @@ export default function Loader () {
             return;
         }
         setVisible(false);
+        setType('');
+        setMessage('');
     };
 
     useEffect(() => {
@@ -67,6 +72,7 @@ export default function Loader () {
                     open={visible}
                     onClose={hideSnackbar}
                     autoHideDuration={5000}
+                    key={key}
                 >
                     <Alert
                         onClose={hideSnackbar}
