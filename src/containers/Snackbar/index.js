@@ -78,6 +78,8 @@ export default function Loader () {
                         onClose={hideSnackbar}
                         severity={type}
                         variant="filled"
+                        icon={false}
+                        sx={{minWidth: '300px'}}
                     >
                         {message}
                     </Alert>
