@@ -10,6 +10,7 @@ export default function ThemeSelector() {
 
     return (
         <FormControlLabel
+            sx={{ml: 'auto'}}
             label={mode === "dark" ? "Dark mode" : "Light mode"}
             control={
                 <Switch
