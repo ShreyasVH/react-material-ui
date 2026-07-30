@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import {Menu} from "@mui/icons-material";
 import {useState} from "react";
+import ThemeSelector from '../../components/themeSelector'
 
 export default function AppBarCustom() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -27,6 +28,7 @@ export default function AppBarCustom() {
           <IconButton edge="start" color="inherit" onClick={toggleDrawer}>
             <Menu />
           </IconButton>
+          <ThemeSelector />
         </Toolbar>
       </AppBar>
       <Drawer open={drawerOpen} onClose={closeDrawer}>
