@@ -2,14 +2,14 @@ import { createTheme } from '@mui/material/styles';
 
 const lightPalette = {
   primary: {
-    main: '#42a5f5',
+    main: '#1976d2',
     contrastText: '#ffffff'
   },
   secondary: {
     main: '#ba68c8'
   },
   error: {
-    main: '#ef5350'
+    main: '#d32f2f'
   },
   warning: {
     main: '#ff9800',
@@ -27,7 +27,7 @@ const lightPalette = {
 
 const darkPalette = {
   primary: {
-    main: '#64b5f6',
+    main: '#90caf9',
     contrastText: '#000000'
   },
 

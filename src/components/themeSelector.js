@@ -18,7 +18,7 @@ export default function ThemeSelector() {
                     inputProps={{
                         "aria-label": "Toggle dark mode"
                     }}
-                    color="secondary"
+                    color="error"
                 />
             }
         />
