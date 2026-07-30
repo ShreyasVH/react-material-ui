@@ -3,9 +3,14 @@ import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { ColorModeContext } from "./ThemeContext";
 import { getTheme } from "./themes";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function ThemeWrapper({ children }) {
-    const [mode, setMode] = useState("light");
+    const prefersDarkMode = useMediaQuery(
+        '(prefers-color-scheme: dark)'
+    );
+
+    const [mode, setMode] = useState(prefersDarkMode ? 'dark': 'light');
     const [theme, setTheme] = useState(null);
 
     const toggleTheme = () => {
