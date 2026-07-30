@@ -33,7 +33,7 @@ export default function Loader () {
             </Button>
             {
                 visible && <div onClick={hideLoader}>
-                    <Dialog open={true} PaperProps={{sx: {backgroundColor: 'transparent', boxShadow: 'none'}}} >
+                    <Dialog open={true} slotProps={{paper: { sx: {backgroundColor: 'transparent', boxShadow: 'none', backgroundImage: "none",}}}} >
                         <CircularProgress />
                     </Dialog>
                 </div>
