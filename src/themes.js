@@ -76,6 +76,8 @@ const darkPalette = {
     secondary: 'rgba(255, 255, 255, 0.7)',
     selected: 'rgba(255, 255, 255, 0.16)'
   },
+
+  mode: 'dark'
 };
 
 // const lightPalette = {
