@@ -8,6 +8,7 @@ import Chips from "../Chips";
 import Loader from '../Loader';
 import Card from '../Card';
 import Snackbar from '../Snackbar';
+import SearchSelectContainer from '../searchSelectContainer';
 
 export default function TabsCustom () {
   const [value, setValue] = useState('Button');
@@ -37,6 +38,7 @@ export default function TabsCustom () {
         <Tab value="Loader" label="Loader" />
         <Tab value="Card" label="Card" />
         <Tab value="Snackbar" label="Snackbar" />
+        <Tab value="SearchSelect" label="SearchSelect" />
       </Tabs>
       <div>
         <TabPanel id="Button">
@@ -62,6 +64,9 @@ export default function TabsCustom () {
         </TabPanel>
         <TabPanel id="Snackbar">
           <Snackbar />
+        </TabPanel>
+        <TabPanel id="SearchSelect">
+          <SearchSelectContainer />
         </TabPanel>
       </div>
     </div>
